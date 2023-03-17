@@ -1,0 +1,1 @@
+sqlcmd -S NGANCONDETHUONG -U sa -P 123 -i data.sql
