@@ -41,6 +41,7 @@ Thư mục chứa 6 thư mục con:
 			. NSD cần copy file này vào C:\Program Files\TVNGAN\AP06TVNGAN_SETUP
 			. Để chương trình hoạt động bình thường
 		- irrKlang.NET4.dll ( thư viện dùng để lập trình âm thanh 2D và 3D)
+					Chú ý rằng cần setup bộ cài đặt ở x64 platform để có thể sử dụng được thư viện này
 
 
 
