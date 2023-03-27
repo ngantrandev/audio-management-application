@@ -32,6 +32,7 @@
             this.groupBoxAudioInfo = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.aUDIOFILESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aP06TVNGANDataSet1 = new AP06TVNGAN.AP06TVNGANDataSet1();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -64,11 +65,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.aP06TVNGANDataSet1 = new AP06TVNGAN.AP06TVNGANDataSet1();
             this.groupBoxAudioInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOFILESBindingSource1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aP06TVNGANDataSet1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxAudioInfo
@@ -107,6 +107,16 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(308, 59);
             this.textBox5.TabIndex = 14;
+            // 
+            // aUDIOFILESBindingSource1
+            // 
+            this.aUDIOFILESBindingSource1.DataMember = "AUDIOFILES";
+            this.aUDIOFILESBindingSource1.DataSource = this.aP06TVNGANDataSet1;
+            // 
+            // aP06TVNGANDataSet1
+            // 
+            this.aP06TVNGANDataSet1.DataSetName = "AP06TVNGANDataSet1";
+            this.aP06TVNGANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox7
             // 
@@ -449,18 +459,6 @@
             this.textBox10.Size = new System.Drawing.Size(146, 22);
             this.textBox10.TabIndex = 18;
             this.textBox10.Text = "1x";
-
-            // 
-            // aUDIOFILESBindingSource1
-            // 
-            this.aUDIOFILESBindingSource1.DataMember = "AUDIOFILES";
-            this.aUDIOFILESBindingSource1.DataSource = this.aP06TVNGANDataSet1;
-
-            // 
-            // aP06TVNGANDataSet1
-            // 
-            this.aP06TVNGANDataSet1.DataSetName = "AP06TVNGANDataSet1";
-            this.aP06TVNGANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Fr3irrKLang06
             // 
@@ -475,6 +473,8 @@
             this.Controls.Add(this.TextBox8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxAudioInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Fr3irrKLang06";
             this.Text = "Fr3WMP06 XỬ LÝ FILE ÂM THANH 2D DÙNG THƯ VIỆN irrKLang";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Fr3irrKLang06_FormClosing);
@@ -482,9 +482,9 @@
             this.groupBoxAudioInfo.ResumeLayout(false);
             this.groupBoxAudioInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOFILESBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aP06TVNGANDataSet1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aP06TVNGANDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

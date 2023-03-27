@@ -530,6 +530,7 @@
             this.Controls.Add(this.groupBoxAudioTest);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBoxAudioInfo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Fr2WMP06";

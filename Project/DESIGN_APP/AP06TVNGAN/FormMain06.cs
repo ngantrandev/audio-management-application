@@ -21,8 +21,6 @@ namespace AP06TVNGAN
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
             timer1_Tick(sender, e);
         }
 
@@ -86,6 +84,11 @@ namespace AP06TVNGAN
         private void tắtFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Visible = !this.Visible; //con trỏ This là Forn hiện tại
+        }
+
+        private void FormMain06_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

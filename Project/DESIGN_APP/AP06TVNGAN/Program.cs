@@ -16,7 +16,8 @@ namespace AP06TVNGAN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain06());
+            //   Application.Run(new FormMain06());
+            Application.Run(new DangNhap());
         }
     }
 }
