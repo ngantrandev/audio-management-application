@@ -34,12 +34,10 @@ Bước 2:
 			- Nhấp đúp chuột vào file có tên Init_Data.bat, nằm cùng thư mục với file readme.txt này
 			- Sau khi tiến trình hoàn thành => Database được khởi tạo thành công
 	Cách 2:
-		- Ở bước 2 của cách 1
 		- Dùng file .bak nằm trong thư mục Backup đính kèm
 		để thực hiện backup database (có vai trò giống như khởi tạo database)
 
 
 	Cách 3:
-		- Ở bước 2 của cách 1
 		- Dùng mã lệnh query nằm trong thư mục Query đính kèm
 		để khởi tạo database
