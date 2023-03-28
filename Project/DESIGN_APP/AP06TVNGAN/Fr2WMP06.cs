@@ -190,20 +190,22 @@ namespace AP06TVNGAN
                     { MessageBox.Show("Có lỗi tải các files âm thanh lên danh sách! " + ex.Message); }
 
                     button10.Text = "Nạp file";
+                    textBox1.Enabled = !textBox1.Enabled; // dược phép nhập mã số nhưng không được nhập trung mã số đã có
+                    textBox5.Enabled = !textBox5.Enabled;
                 }//NSD OK              
             }//Lưu file
 
             
 
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+            //axWindowsMediaPlayer1.Ctlcontrols.play();
         }//button10
         private void Button11_Click(object sender, EventArgs e)// SỬA THÔNG TIN FILE ÂM THANH
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
             
             //B1:Cho || cấm các nút lệnh các khác và textbox mô tả tin file âm thanh (không sửa được các thông khác)
-            textBox1.Enabled = !textBox1.Enabled; // dược phép nhập mã số nhưng không được nhập trung mã số đã có
-            textBox5.Enabled = !textBox5.Enabled;
+            //textBox1.Enabled = !textBox1.Enabled; // dược phép nhập mã số nhưng không được nhập trung mã số đã có
+            
             button1.Enabled = !button1.Enabled; // button play
             button2.Enabled = !button2.Enabled; // button pause
             button3.Enabled = !button3.Enabled; // button stop
@@ -221,8 +223,7 @@ namespace AP06TVNGAN
             //bắt đầu Sửa thông tin file âm thanh trong các TextBox ["Sửa thông tin files" copy từ Design sang, KHÔNG tự  nhập]
             {//Thông báo nhắc NSD cách sủa thông tin
                 MessageBox.Show("Quý vị chỉ được sửa mô tả file"); //thông báo hướng dẫn NSD cách sửa thông tin file
-              
-
+                textBox5.Enabled = !textBox5.Enabled;
                 button11.Text = "Lưu"; //Đổi nhãn (.Text) thành2 "Lưu...": tự nhập
             }
             else//Sau khi NSD sửa thông tin xong =>Lưu thông tin file âm thanh sau sửa vào DB
@@ -233,7 +234,7 @@ namespace AP06TVNGAN
                     //Lưu THÔNG TIN FILE ÂM THANH sau Sửa VÀO DB [CÂU LỆNH QUANG TRỌNG]
                 }
                 catch (System.Exception ex)
-                { MessageBox.Show("Có lỗi khi SỬA thông tin file âm thanh: " + ex.Message); }
+                { MessageBox.Show("Có lỗi khi sửa thông tin file âm thanh: " + ex.Message); }
 
                 //B4: Tải file mới vừa nạp vào ListBox và nghe thử / axWMP = COPY xuống TỪ trên FrWMPManagement_Load(..)
                 try
@@ -245,10 +246,10 @@ namespace AP06TVNGAN
                 { MessageBox.Show("Có lỗi tải các files âm thanh lên danh sách! " + ex.Message); }
                 //B5: Đổi nhãn thành ban đầu
                 button11.Text = "Sửa thông tin files";
-                //Trả lại nhãn ban đầu ["Sửa thông tin files" copy từ Design sang, KHÔNG tự  nhập]                
+                //Trả lại nhãn ban đầu ["Sửa thông tin files" copy từ Design sang, KHÔNG tự  nhập]
+                textBox5.Enabled = !textBox5.Enabled;
+                axWindowsMediaPlayer1.Ctlcontrols.play();
             }//else Lưu thông tin file vào DB
-
-            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
         private void Button12_Click(object sender, EventArgs e)
         {
